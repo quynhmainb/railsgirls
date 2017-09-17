@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Demo</title>
+    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
     <%= csrf_meta_tags %>
     
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
@@ -33,7 +36,7 @@
                 <%= link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link' %> |
                 <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
                 
-                <%= image_tag current_user.gravatar_url %>
+                <%= image_tag current_user.gravatar_url, class: "user-avatar" %>
                 
               <% else %>
                 <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
